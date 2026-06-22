@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☆*:.｡. LIVE CAT TRANSLATOR  .｡.:*☆</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="webpage-frame">
+    <header>
+        <h1 id="site-title">₍^. ̫ .^₎⟆ Cat Translator</h1>
+        <p class="blinker" id="warning-text">!! WARNING: LIVE ACOUSTIC SYNC ENGINE RUNNING !!</p>
+        <marquee scrollamount="6" id="marquee-text">+++ [CAT_OS_ONLINE] +++ WORD-FOR-WORD TRANSLATION ACTIVE +++ TYPE ANYTHING TO HEAR THE FELINE DIALECT STREAM LIVE v3.0.3 +++</marquee>
+
+        <div class="meow-toggle-wrap">
+            <button class="meow-btn" id="meow-toggle" onclick="toggleMeowMode()">[ MEOW MODE ]</button>
+            <span class="meow-status" id="meow-status">STATUS: OFF</span>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <div class="cipher-workspace">
+            <div class="io-panel">
+                <label id="label-human">HUMAN TALK AREA [BOX 1]</label>
+                <textarea id="human-text" oninput="syncTranslate('human')" placeholder="Type regular human sentences... (ex: i want food now)"></textarea>
+            </div>
+            <div class="io-panel" style="margin-top:25px;">
+                <label id="label-cat">CAT SPEAK DIALECT [BOX 2]</label>
+                <textarea id="cat-text" oninput="syncTranslate('cat')" placeholder="Or type cat words like 'meow mrrp nya' here..."></textarea>
+            </div>
+        </div>
+
+        <div class="edu-panel">
+            <div class="edu-title" id="edu-title-text">(=^･ｪ･^=) LEN-BASED ARRAYS</div>
+            <p id="edu-desc">This engine maps each human word to a cat vocable using character-level hashing — same word always gives same sound.</p>
+            <p id="edu-desc2">1 word human = 1 cat vocable. Punctuation preserved.</p>
+            <div class="matrix-array" id="dict-display">
+                CAT_DICT = ["meow","mrrp","mraw","purr","nya","meoww","prrt","miau","nyan","mreow","rrrow","mew"]
+                <br><br>
+                HUMAN_DICT = ["feed","human","now","pet","me","serve","hungry","sleep","attention","gimme","want","more","food","play","cuddle","outside"]
+            </div>
+        </div>
+    </div>
+
+    <div class="image-gallery" id="gallery">
+        <div>
+            <p class="gallery-label" id="gallery-label">[[ LIVE CAT FEED — REFRESHES ON TRANSLATE ]]</p>
+            <div style="display:flex;justify-content:space-around;gap:10px;flex-wrap:wrap;">
+                <div class="gall-box">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'></svg>" class="gall-img" id="cat-img-0" alt="Cat">
+                    <span id="cat-label-0">[CAT_FILE_01.JPG]</span>
+                </div>
+                <div class="gall-box">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'></svg>" class="gall-img" id="cat-img-1" alt="Cat">
+                    <span id="cat-label-1">[CAT_FILE_02.JPG]</span>
+                </div>
+                <div class="gall-box">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'></svg>" class="gall-img" id="cat-img-2" alt="Cat">
+                    <span id="cat-label-2">[CAT_FILE_03.JPG]</span>
+                </div>
+                <div class="gall-box">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'></svg>" class="gall-img" id="cat-img-3" alt="Cat">
+                    <span id="cat-label-3">[CAT_FILE_04.JPG]</span>
+                </div>
+            </div>
+            <button class="refresh-btn" onclick="refreshAllCats()">[ ↻ FETCH NEW CATS ]</button>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footer-text">made by hellcaaaat</p>
+        <p>HIT COUNTER: <span class="counter" id="hit-counter">00043521</span></p>
+    </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
